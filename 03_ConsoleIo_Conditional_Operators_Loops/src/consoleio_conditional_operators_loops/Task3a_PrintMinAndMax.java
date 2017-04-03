@@ -7,14 +7,28 @@ public class Task3a_PrintMinAndMax {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String count = "";
-        while (n > 0) {
-            int x = sc.nextInt();
-            count += x;
-            if (x == n);
-            break;
+        int current = sc.nextInt();
+
+        int min = current;
+
+        int max = current;
+
+        for (int i = 1; i < n; i++) {
+
+            current = sc.nextInt();
+
+            if (current < min) {
+
+                min = current;
+
+            } else if (current > max) {
+
+                max = current;
+            }
 
         }
-        System.out.println(count);
+
+        System.out.println(min + " " + max);
+
     }
 }
