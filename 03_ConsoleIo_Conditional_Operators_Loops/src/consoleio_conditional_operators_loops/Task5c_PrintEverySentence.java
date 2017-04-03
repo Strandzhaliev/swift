@@ -8,8 +8,11 @@ public class Task5c_PrintEverySentence {
         Scanner input = new Scanner(System.in);
         String str = input.nextLine();
 
-//        String list = "vladimir likes? Football";
-//        String[] s = list.split("?");
-//        System.out.println(Arrays.toString(s));
+        for (char ch : str.toCharArray()) {
+            System.out.print(ch);
+            if (ch == '.' || ch == '!' || ch == '?') {
+                System.out.println();
+            }
+        }
     }
 }
