@@ -16,29 +16,5 @@ public class Task2f_PrintMirrorNumber {
         }
         System.out.println(reverse);
 
-        int n1 = 4;
-        int[][] arr = new int[n1][n1];
-
-        int ind = 1;
-        int ii = 0;
-        int jj = 1;
-
-        //  while(true) {
-        while (jj >= 0) {
-            arr[ii][jj] = ind;
-            ii++;
-            jj--;
-
-        }
-
-        ii++;
-        jj++;
-
-        while (ii <= 0) {
-            arr[ii][jj] = ind;
-            ind++;
-            ii--;
-        }
-        // }
     }
 }
