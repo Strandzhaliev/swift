@@ -8,19 +8,12 @@ public class Task1e_ReadNNumbers {
         Scanner scan = new Scanner(System.in);
         System.out.println("Entered broi number: ");
         int num = scan.nextInt();
-        int x = 0;
-        //System.out.println(num);
+
         for (int i = 1; i <= num; i++) {
-            x = scan.nextInt();
-            x += i;
+            int x = scan.nextInt();
+            System.out.println(x);
 
         }
-        System.out.print(x + " ");
-//        String draft = " ";
-//        while (num > 0) {
-//            int x = scan.nextInt();
-//            draft += x;
-//        }
-//        System.out.println(draft);
+
     }
 }
