@@ -19,6 +19,7 @@ public class Task1_ResultFromCodeFragment {
         float z = x * y;
 
         System.out.println(z + " " + (x * y));
+        System.out.println("The End.");
 
     }
 }
