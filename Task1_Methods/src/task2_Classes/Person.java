@@ -12,7 +12,7 @@ public class Person {
 
     public Person(String newName) {
         this.name = newName;
-
+        
     }
 
     public Person(String name, int age) {
@@ -51,6 +51,7 @@ public class Person {
         Person person = new Person();
         person.age = 12;
         person.name = "Petar";
+
         person.introduce();
     }
 
