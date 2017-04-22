@@ -1,70 +1,55 @@
 package task2_Classes;
 
 public class Car {
+    
+    int currentYear = 2017;
 
-    String mark;
+    String brand;
     String model;
-    int kw;
-    int year;
+    int horsePower;
+    int yearProduced;
 
-    public Car(String newMark, String newModel, int newKw, int newYear) {
-        this.mark = newMark;
-        this.model = newModel;
-        this.kw = newKw;
-        this.year = newYear;
+    int insuranceCategory() {
+
+        int age = currentYear - yearProduced;
+
+        if (age < 8) {
+            return 1;
+        } else if (age < 15) {
+            return 2;
+        } else if (age < 25) {
+            return 3;
+        } else {
+            return 4;
+        }
     }
 
-    public void setName(String name) {
-        this.mark = name;
-    }
+    double getInsurancePrice() {
+        int category = insuranceCategory();
 
-    public String getMark() {
-        return mark;
-    }
-
-    public void setModel(String name) {
-        this.model = name;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setKw(int kw) {
-        this.kw = kw;
-    }
-
-    public int getKw() {
-        return kw;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public int insuranceCategory() {
-        int y = 2017;
-        int result = y - year;
-        if (result > 0 && result < 8) {
-            System.out.println("Kat1");
-        } else if (result > 8 && result <= 15) {
-            System.out.println("Kat2");
-        } else if (result > 15 && result <= 25) {
-            System.out.println("Kat3");
-        } else if (result > 25) {
-            System.out.println("Kat4");
+        double price = 0;
+        switch (category) {
+            case 1:
+                price = 150;
+                break;
+            case 2:
+                price = 200;
+                break;
+            case 3:
+                price = 300;
+                break;
+            case 4:
+                price = 500;
+                break;
         }
 
-        return 0;
-    }
-
-    public static void main(String[] args) {
-        Car car = new Car("audi", "a4", 131, 1986);
-
-        car.insuranceCategory();
+        if (horsePower < 80) {
+            return price * 1.2;
+        } else if (horsePower > 140) {
+            return price * 1.45;
+        } else {
+            return price;
+        }
     }
 }
+

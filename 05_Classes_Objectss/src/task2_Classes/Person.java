@@ -12,12 +12,16 @@ public class Person {
 
     public Person(String newName) {
         this.name = newName;
-
+        age = -1;
     }
 
     public Person(String name, int age) {
         this.name = name;
-        this.age = age;
+        if (age >= 0 && age <= 150){
+            this.age = age;
+        }else {
+            System.out.println("ERROR: Age in incorrect");
+        }
     }
 
     public void setName(String name) {
@@ -29,28 +33,21 @@ public class Person {
     }
 
     public void setAge(int age) {
-        if (age > 0 && age < 150) {
-            System.out.println(age);
-        } else {
-            System.out.println("ERROR");
-        }
+        this.age = age;
     }
 
     public int getAge() {
-        return this.age;
+        return age;
     }
 
     public String introduce() {
-        System.out.println("Hello I'm " + getName() + ". I'm " + getAge()
-                + "years old.");
-
-        return "I am John Doe";
-    }
-
-    public static void main(String[] args) {
-        Person person = new Person();
-        person.age = 12;
-        person.name = "Petar";
-        person.introduce();
+        if(name.equals("No name") && age == -1) {
+            return "I am John Doe";
+        } else if (age == -1) {
+            return String.format("Hello I'm %s name", name);
+        } else {
+            return String.format("Hello I'm %s name. I am %d years old.", name, age);
+        }
+                
     }
 }
