@@ -2,7 +2,7 @@ package dateDifference;
 
 import java.util.Scanner;
 
-public class DateDifference {
+public class task_DateDifference {
 
     public static void main(String[] args) {
 
